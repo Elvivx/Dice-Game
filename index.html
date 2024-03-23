@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <main>
+        <section class="game">
+            <!-- players -->
+            <section class="players">
+                <!-- player 1 -->
+                <section class="player-1 active">
+                    <section class="info">
+                        <h1>
+                            <!-- Player 1 name--> asdfghj
+                        </h1>
+                        <p class="player-score">
+                            <!-- 0 -->
+                        </p>
+                    </section>
+                    <section class="current-score-1">
+                        <p>Current 🎲Roll</p>
+                        <p class="score">
+                            <!-- 0 -->
+                        </p>
+                    </section>
+                </section>
+                <!-- player 2 -->
+                <section class="player-2 ">
+                    <section class="info">
+                        <h1>
+                            <!-- Player 2 name -->asdfghj
+                        </h1>
+                        <p class="player-score"></p>
+                    </section>
+                    <section class="current-score-2">
+                        <p>Current 🎲Roll</p>
+                        <p class="score">
+                            <!-- 0 -->
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <!-- control center -->
+            <section class="controls">
+                <div class="top">
+                    <button class="reset">🔁Reset</button>
+                </div>
+
+                <div class="dice">
+                    <div class="die"></div>
+                </div>
+
+                <div class="bottom">
+                    <button class="roll-dice">🎲Roll</button>
+                    <button class="hold-dice">📥Hold</button>
+                </div>
+            </section>
+        </section>
+        <!-- how to play rules -->
+        <div class="rules">
+            <div class="how">
+                <h1>Rules</h1>
+                <ul>
+                    <li>First player to get 100 points wins!!! <br></li>
+                    <li>Active player is switched if rolls 1 on dice...</li>
+                    <li>Click 🎲Roll to get new dice numbers</li>
+                    <li>Press 📥Hold to get points from rolled dice...</li>
+                </ul>
+                <button class="play">Play😊😁</button>
+            </div>
+        </div>
+    </main>
+    <!-- winners modal pop-up -->
+    <div class="winner">
+        <div class="win">
+            <h1></h1>
+            <button class="reset">🔁Try Again </button>
+            <button class="new-game">🔁New Game</button>
+        </div>
+    </div>
+    <!-- player name pop-up modal -->
+    <div class="get-players-name">
+        <div class="player-name">
+            <form action="">
+                <h1>Name of first player:</h1>
+                <input type="text" placeholder="First Player" id="player-1" required>
+                <span class="require-input">
+                    Input cannot be empty!
+                </span>
+                <!-- <button class="reset">Next</button> -->
+                <h1>Name of second player:</h1>
+                <input type="text" placeholder="Second Player" id="player-2" required>
+                <span class="require-input">
+                    Both names are needed.
+                </span>
+                <input type="submit" class="start" placeholder="Start!" value="Start!">
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
