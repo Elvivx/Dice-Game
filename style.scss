@@ -140,6 +140,9 @@ main{
     }
     .get-players-name{
         position: fixed !important;
+        h1{
+            font-size: 22px;
+        }
         .player-name{
             width: 100dvw !important;
             padding: 20px  !important;
