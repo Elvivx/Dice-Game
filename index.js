@@ -29,12 +29,7 @@ currentPlayer2Roll.textContent = currentScore2
 rollDice.onclick = () =>{
     newDie()
     playing = true
-    function winSound (sound){
-        let wSound = new Audio(`${sound}`)
-        wSound.play()
-        return
-    }
-    winSound('dice-142528.mp3')
+   
 }
 holdDice.onclick  = () =>{
     if(playing ){
@@ -65,17 +60,11 @@ holdDice.onclick  = () =>{
                 setTimeout(()=>{dice.innerHTML = `` } ,1000)
             }
         }
+        winSound('beep-6-96243.mp3')
     }else{
         dice.innerHTML = `<span class="switch">Roll Dice!</span>`
         setTimeout(()=>{dice.innerHTML = `` } ,1500)
     }
-        function winSound (sound){
-        let wSound = new Audio(`${sound}`)
-        wSound.play()
-        return
-    }
-    winSound('beep-6-96243.mp3')
-    
     winner()
 }
 reset.forEach((btn) =>{
@@ -113,6 +102,7 @@ function turns(rolled){
         if(rolled > 1){
             currentScore1 = rolled + currentScore1
             currentPlayer1Roll.textContent = currentScore1
+            winSound('dice-142528.mp3')
         }else {
             currentScore1 = 0
             currentPlayer1Roll.textContent = currentScore1
@@ -128,6 +118,7 @@ function turns(rolled){
        if(rolled > 1){
            currentScore2 = rolled + currentScore2
            currentPlayer2Roll.textContent = currentScore2
+           winSound('dice-142528.mp3')
        }else {
            currentScore2 = 0
            currentPlayer2Roll.textContent = currentScore2
@@ -159,6 +150,10 @@ function winner(){
     }
     
     active()
+}
+function winSound (sound){
+    let wSound = new Audio(`${sound}`)
+    wSound.play()
 }
 
 // extras.....
